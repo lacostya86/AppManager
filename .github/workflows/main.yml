@@ -1,5 +1,5 @@
-runs-on: self-hosted
 name: Build
+
 on:
   push:
     branches: [ master ]
@@ -22,7 +22,8 @@ on:
 
 jobs:
   build:
-  steps:
+  runs-on: self-hosted
+    steps:
     - name: Clone the repository
       uses: actions/checkout@v2
       with:
